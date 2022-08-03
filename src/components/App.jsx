@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
-import {Profile} from 'components/profile/profile'
+import { ProfileCard } from 'components/profile/profile'
+import user from 'components/user.json'
 export const App = () => {
   return (
     
     <>
-        <Profile/>
+        <ProfileCard users = {user}/>
     </>
     
   );
