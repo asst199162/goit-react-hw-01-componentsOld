@@ -1,29 +1,36 @@
 
-export const TransactionHistory = ({ }) =>
+import {TableData,TableHead,Table,TableR} from "./TransactionHistory.styled"
+import PropTypes from 'prop-types';
+
+
+export const TransactionHistory = ({transactions}) =>
 {
-return<>
-<table class="transaction-history">
+    return <Table>
+        {transactions.map(({ id, type, amount, currency }) => {
+        return <tbody>
+            <TableR>
+                <TableData>{type}</TableData>
+                <TableData>{amount}</TableData>
+                <TableData>{currency}</TableData>
+            </TableR>
+        </tbody> 
+        }
+        )}
+
+
     <thead>
         <tr>
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Currency</th>
+            <TableHead>Type</TableHead>
+            <TableHead>Amount</TableHead>
+            <TableHead>Currency</TableHead>
         </tr>
-    </thead>
+        </thead>
 
-    <tbody>
-        <tr>
-            <td>Invoice</td>
-            <td>125</td>
-            <td>USD</td>
-        </tr>
-        <tr>
-            <td>Withdrawal</td>
-            <td>85</td>
-            <td>USD</td>
-        </tr>
-    </tbody>
-</table>
-</>
-
+    </Table>
 }
+
+Table.prototype = {
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+};

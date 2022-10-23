@@ -1,5 +1,5 @@
-//import PropTypes from 'prop-types';
-import { Profile, Avatar, Itemstats, Stats,Text,DescriptionText } from './profile.style';
+import PropTypes from 'prop-types';
+import { Profile, Avatar, Itemstats, Stats,Text,DescriptionText, AmountStat, } from './profile.style';
 
 
 export const ProfileCard = ({ users }) => {
@@ -10,26 +10,35 @@ export const ProfileCard = ({ users }) => {
       alt="User avatar"
         />
   <DescriptionText>
-    <Text bold l>{username }</Text>
-    <Text >@{tag}</Text>
+    <Text bold l black>{username }</Text>
+    <Text  >@{tag}</Text>
     <Text >{location}</Text>
   </DescriptionText>     
 
 
 
-  <Stats class="stats">
+  <Stats>
     <Itemstats>
-      <span class="label">Followers</span>
-      <span class="quantity">{followers}</span>
+      <AmountStat gray>Followers</AmountStat>
+      <AmountStat bold>{followers}</AmountStat>
     </Itemstats>
     <Itemstats>
-      <span class="label">Views</span>
-      <span class="quantity">{views}</span>
+      <AmountStat gray>Views</AmountStat>
+      <AmountStat bold>{views}</AmountStat>
     </Itemstats>
-    <Itemstats>
-      <span class="label">Likes</span>
-      <span class="quantity">{likes}</span>
+    <Itemstats noLineBorder>
+      <AmountStat gray>Likes</AmountStat>
+      <AmountStat bold>{likes}</AmountStat>
     </Itemstats>
   </Stats>
 </Profile>
 }
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  followers: PropTypes.number,
+  views: PropTypes.number,
+  likes: PropTypes.number,
+};

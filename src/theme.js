@@ -2,7 +2,8 @@ export const theme = {
     colors: {
     black: 'black',
     gray: 'gray',
-    white:'white',
+    white: 'white',
+    background:'hsl(0deg 0% 0% / 10%)',
     },
     space: [0,2,4,8,16,32,64,128,256],
     fonts: {
@@ -30,6 +31,7 @@ export const theme = {
         first: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
     },
     borders: {
+        none:'0px',
         black: '1px solid black',
     },
 

@@ -1,10 +1,17 @@
-export const FriendList = ({ }) =>
+import { IoAccessibility } from "react-icons/io5";
+import { ItemList,Icon } from "./friend.styled";
+
+
+export const FriendList = ({ friends }) =>
 {
     return <>
-    <li class="item">
-        <span class="status"></span>
-        <img class="avatar" src="" alt="User avatar" width="48" />
-        <p class="name"></p>
-    </li>
+        {friends.map(({ avatar, name, isOnline, id }) =>
+    <ItemList>
+        <Icon isOnline={isOnline}><IoAccessibility /></Icon>
+        <img src={avatar} alt="User avatar" width="50" />
+        <p>{name}</p>
+    </ItemList>
+        )}
+
     </>
 }
