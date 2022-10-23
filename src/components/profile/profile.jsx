@@ -10,7 +10,7 @@ export const ProfileCard = ({ users }) => {
       alt="User avatar"
         />
   <DescriptionText>
-    <Text bold>{username }</Text>
+    <Text bold l>{username }</Text>
     <Text >@{tag}</Text>
     <Text >{location}</Text>
   </DescriptionText>     
