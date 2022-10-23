@@ -17,6 +17,5 @@ padding-top:25px;
 
 export const TableR = styled.tr`
 
-:nth-of-type(2n) {background-color: ${p =>p.theme.colors.gray};
-}`
+:nth-of-type(2n) {background-color:'gray'};`
 

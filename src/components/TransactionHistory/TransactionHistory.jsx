@@ -8,7 +8,7 @@ export const TransactionHistory = ({transactions}) =>
     return <Table>
         {transactions.map(({ id, type, amount, currency }) => {
         return <tbody>
-            <TableR>
+            <TableR key ={id}>
                 <TableData>{type}</TableData>
                 <TableData>{amount}</TableData>
                 <TableData>{currency}</TableData>
