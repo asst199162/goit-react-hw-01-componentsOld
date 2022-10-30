@@ -10,8 +10,9 @@ export const ItemList = styled.li`
     margin-top:${p => p.theme.space[4]}px;
     box-shadow: ${p => p.theme.shadows.first};
     border-radius:${p => p.theme.radii.normal};
-    &:first-child {
+        :first-child {
     margin-top: 0px;}
+
 ` 
 export const Icon = styled.span`
 color:${p=>p.isOnline?'green':'red'};

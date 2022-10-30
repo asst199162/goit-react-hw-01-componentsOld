@@ -13,9 +13,14 @@ text-align: center;
 export const Table = styled.table`
 text-align: center;
 padding-top:25px;
+td tr :nth-of-type(2n) {background-color:#ff0000};
 `
 
 export const TableR = styled.tr`
 
-:nth-of-type(2n) {background-color:'gray'};`
+`
+
+export const TableRe = styled.thead`
+
+`
 

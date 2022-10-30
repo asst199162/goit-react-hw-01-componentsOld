@@ -1,5 +1,5 @@
 
-import {TableData,TableHead,Table,TableR} from "./TransactionHistory.styled"
+import {TableData,TableHead,Table,TableR,TableRe} from "./TransactionHistory.styled"
 import PropTypes from 'prop-types';
 
 
