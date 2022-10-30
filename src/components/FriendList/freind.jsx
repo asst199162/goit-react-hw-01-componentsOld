@@ -8,19 +8,17 @@ export const FriendList = ({ friends }) =>
 {
     return <>
         {friends.map(({ avatar, name, isOnline, id }) =>
-    <ItemList>
+    <ItemList key={id}>
         <Icon isOnline={isOnline}><IoAccessibility /></Icon>
         <img src={avatar} alt="User avatar" width="50" />
         <p>{name}</p>
     </ItemList>
-
         )}
-
     </>
 }
 
 ItemList.propTypes = {
-  isOnline: PropTypes.bool.isRequired,
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool,
+  avatar: PropTypes.string,
+  name: PropTypes.string,
 };
